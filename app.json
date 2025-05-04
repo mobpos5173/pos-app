@@ -1,0 +1,51 @@
+{
+    "expo": {
+        "name": "MPOS App",
+        "slug": "pos-app",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/images/logo.png",
+        "userInterfaceStyle": "light",
+        "splash": {
+            "image": "./assets/images/splash-logo.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "assetBundlePatterns": ["**/*"],
+        "ios": {
+            "supportsTablet": true,
+            "infoPlist": {
+                "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access camera.",
+                "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+            }
+        },
+        "plugins": [
+            [
+                "expo-barcode-scanner",
+                {
+                    "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+                }
+            ]
+        ],
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/images/logo.png",
+                "backgroundColor": "#ffffff"
+            },
+            "permissions": ["CAMERA", "android.permission.CAMERA"],
+            "package": "com.mpos.posapp"
+        },
+        "extra": {
+            "eas": {
+                "projectId": "ca48bbd1-03ff-4681-9161-e71ff089a316"
+            }
+        },
+        "owner": "mpos.posapp",
+        "runtimeVersion": {
+            "policy": "appVersion"
+        },
+        "updates": {
+            "url": "https://u.expo.dev/ca48bbd1-03ff-4681-9161-e71ff089a316"
+        }
+    }
+}
